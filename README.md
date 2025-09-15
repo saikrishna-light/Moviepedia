@@ -7,19 +7,6 @@
 
 ---
 
-## 📸 Screenshots
-
-| Home Page | Light Mode | Dark Mode |
-|-----------|------------|-----------|
-| ![Home](img/1.png) | ![Light](img/2.png) | ![Dark](img/3.png) |
-
-| Search History | Search History |
-|----------------|----------------|
-| ![History](img/4.png) | ![Error](img/5.png) |
-
-> *Screenshots show desktop view. The layout is fully responsive across all devices.*
-
----
 
 ## 🚀 Features
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moviepedia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- Theme Toggle Switch -->
+    <header>
+      <label class="theme-switch" for="toggleTheme">
+        <input
+          type="checkbox"
+          id="toggleTheme"
+          aria-label="Toggle light/dark theme"
+        />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h1 class="title">
+        Moviepedia
+        <img src="logo.png" alt="logo" style="width: 50px; height: auto" />
+      </h1>
+
+      <!-- Movie Search Form -->
+      <form id="movieForm" class="search-form" autocomplete="off">
+        <input
+          type="text"
+          id="movieName"
+          placeholder="Enter movie name"
+          required
+          aria-label="Movie name"
+        />
+        <button type="submit">Get Info</button>
+        <button
+          type="button"
+          id="clearBtn"
+          aria-label="Clear input and details"
+        >
+          Clear
+        </button>
+      </form>
+
+      <!-- Spinner / Loader -->
+      <div
+        id="spinner"
+        class="spinner hidden"
+        aria-live="polite"
+        aria-label="Loading"
+      ></div>
+
+      <!-- Movie Information Output -->
+      <div id="movieDetails" class="movie-card" aria-live="polite"></div>
+
+      <!-- Search History Section -->
+      <section class="history-section">
+        <h2>Search History</h2>
+        <ul
+          id="searchHistory"
+          tabindex="0"
+          aria-label="Search history list"
+        ></ul>
+        <button
+          id="clearHistoryBtn"
+          class="clear-history-btn"
+          aria-label="Clear search history"
+        >
+          Clear History
+        </button>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p><strong>Website Owner:</strong> Sai Krishna</p>
+
+       
+            
+          <a
+            href="https://www.linkedin.com/in/sai-krishna-light"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=8808&format=png&color=FAB005"
+              alt="LinkedIn Logo"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://github.com/saikrishna-light"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=YSWCDCSF4H3N&format=png&color=FAB005"
+              alt="GitHub Logo"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
+        <p class="note">
+          ⚠️ This website uses data from OMDb and may not be 100% accurate.
+        </p>
+        <p>
+          &copy; <span id="year"></span> <strong>Moviepedia</strong>. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+    <script>
+      // Dynamic copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
